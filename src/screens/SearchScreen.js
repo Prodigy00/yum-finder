@@ -16,7 +16,7 @@ const SearchScreen = () => {
   };
 
   return (
-    <View style={styles.screenView}>
+    <>
       <SearchBar
         onTermSubmit={() => searchApi(term)}
         term={term}
@@ -38,7 +38,7 @@ const SearchScreen = () => {
           title="Big Spender"
         />
       </ScrollView>
-    </View>
+    </>
   );
 };
 const styles = StyleSheet.create({
