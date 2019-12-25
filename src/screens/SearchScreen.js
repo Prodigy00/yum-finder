@@ -7,7 +7,6 @@ import RestaurantsList from "./components/RestaurantsList";
 const SearchScreen = () => {
   const [term, setTerm] = useState("");
   const [searchApi, restaurants, errorMessage] = useRestaurants();
-  //   console.log({ restaurants });
 
   const filterResultsByPrice = price => {
     return restaurants.filter(restaurant => {
