@@ -10,6 +10,7 @@ const RestaurantsList = ({ title, restaurants }) => {
       <Text style={styles.title}>{title}</Text>
       <FlatList
         horizontal
+        showsHorizontalScrollIndicator={false}
         data={restaurants}
         keyExtractor={restaurant => restaurant.id}
         renderItem={renderItem}
