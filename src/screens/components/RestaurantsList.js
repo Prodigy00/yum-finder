@@ -1,9 +1,19 @@
 import React from "react";
-import { View, Text, StyleSheet, FlatList } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  FlatList,
+  TouchableOpacity
+} from "react-native";
 import RestaurantDetail from "../components/RestaurantDetail";
-const RestaurantsList = ({ title, restaurants }) => {
+const RestaurantsList = ({ title, restaurants, navigation }) => {
   const renderItem = ({ item }) => {
-    return <RestaurantDetail restaurant={item} />;
+    return (
+      <TouchableOpacity onPress={() => navigation.navigate("Restaurant")}>
+        <RestaurantDetail restaurant={item} />
+      </TouchableOpacity>
+    );
   };
   return (
     <View style={styles.container}>
