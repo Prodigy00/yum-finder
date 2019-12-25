@@ -18,6 +18,9 @@ const RestaurantsList = ({ title, restaurants, navigation }) => {
       </TouchableOpacity>
     );
   };
+  if (!restaurants.length) {
+    return null;
+  }
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
